@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TeamsModule } from './teams/teams.module';
+import { MatchesModule } from './matches/matches.module';
 
 @Module({
   imports: [
@@ -21,8 +22,10 @@ import { TeamsModule } from './teams/teams.module';
         database: configService.get('DB_NAME'),
         autoLoadEntities: true,
         synchronize: true,
+        // dropSchema: true,
       }),
     }),
+    MatchesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

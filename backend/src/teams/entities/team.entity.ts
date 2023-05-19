@@ -1,7 +1,8 @@
+import { Team } from 'interfaces/team.interface';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Team {
+export class TeamEntity implements Team {
   @PrimaryGeneratedColumn()
   id: number;
 
