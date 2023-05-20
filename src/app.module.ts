@@ -5,11 +5,11 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TeamsModule } from './teams/teams.module';
 import { MatchesModule } from './matches/matches.module';
+import { SimulationsModule } from './simulations/simulations.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    TeamsModule,
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -25,7 +25,9 @@ import { MatchesModule } from './matches/matches.module';
         // dropSchema: true,
       }),
     }),
+    TeamsModule,
     MatchesModule,
+    SimulationsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

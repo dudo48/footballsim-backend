@@ -1,4 +1,4 @@
-import { Match } from 'interfaces/match.interface';
+import Match from 'interfaces/match.interface';
 import { TeamEntity } from 'src/teams/entities/team.entity';
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 

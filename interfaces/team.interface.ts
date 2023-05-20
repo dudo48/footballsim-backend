@@ -1,4 +1,4 @@
-export interface Team {
+export default interface Team {
   id: number;
   name: string;
   attack: number;

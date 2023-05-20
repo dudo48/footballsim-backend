@@ -1,6 +1,6 @@
-import { Team } from './team.interface';
+import Team from './team.interface';
 
-export interface Match {
+export default interface Match {
   id: number;
   homeTeam: Team;
   awayTeam: Team;

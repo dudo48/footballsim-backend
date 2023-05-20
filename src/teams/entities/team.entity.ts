@@ -1,4 +1,4 @@
-import { Team } from 'interfaces/team.interface';
+import Team from 'interfaces/team.interface';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
