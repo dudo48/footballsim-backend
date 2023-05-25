@@ -16,6 +16,10 @@ export class TeamsService {
     return this.repository.save(createTeamDto);
   }
 
+  createMultiple(teams: CreateTeamDto[]) {
+    return this.repository.save(teams);
+  }
+
   findAll() {
     return this.repository.find();
   }

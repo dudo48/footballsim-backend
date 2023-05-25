@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { TeamsService } from './teams.service';
 import { CreateTeamDto } from './dto/create-team.dto';
 import { UpdateTeamDto } from './dto/update-team.dto';
@@ -10,6 +18,11 @@ export class TeamsController {
   @Post()
   create(@Body() createTeamDto: CreateTeamDto) {
     return this.teamsService.create(createTeamDto);
+  }
+
+  @Post('multiple')
+  createMultiple(@Body() teams: CreateTeamDto[]) {
+    return this.teamsService.createMultiple(teams);
   }
 
   @Get()

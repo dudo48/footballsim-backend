@@ -1,4 +1,11 @@
-import { IsHexColor, IsNotEmpty, IsNumber, IsOptional, IsPositive, MinLength } from 'class-validator';
+import {
+  IsHexColor,
+  IsNotEmpty,
+  IsNumber,
+  IsOptional,
+  IsPositive,
+  MinLength,
+} from 'class-validator';
 
 export class CreateTeamDto {
   @IsNotEmpty()
