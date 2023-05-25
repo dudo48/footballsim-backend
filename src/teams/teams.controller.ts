@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  ParseArrayPipe,
 } from '@nestjs/common';
 import { TeamsService } from './teams.service';
 import { CreateTeamDto } from './dto/create-team.dto';
@@ -21,7 +22,9 @@ export class TeamsController {
   }
 
   @Post('multiple')
-  createMultiple(@Body() teams: CreateTeamDto[]) {
+  createMultiple(
+    @Body(new ParseArrayPipe({ items: CreateTeamDto })) teams: CreateTeamDto[],
+  ) {
     return this.teamsService.createMultiple(teams);
   }
 
