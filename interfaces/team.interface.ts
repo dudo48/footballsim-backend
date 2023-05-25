@@ -4,4 +4,5 @@ export default interface Team {
   attack: number;
   defense: number;
   homeAdvantage: number;
+  color: string;
 }

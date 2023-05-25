@@ -17,4 +17,7 @@ export class TeamEntity implements Team {
 
   @Column({ name: 'home_advantage', type: 'real', default: 1.25 })
   homeAdvantage: number;
+
+  @Column({ default: '#ffffff' })
+  color: string;
 }

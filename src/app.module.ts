@@ -22,7 +22,7 @@ import { SimulationsModule } from './simulations/simulations.module';
         database: configService.get('DB_NAME'),
         autoLoadEntities: true,
         synchronize: true,
-        // dropSchema: true,
+        dropSchema: true,
       }),
     }),
     TeamsModule,
