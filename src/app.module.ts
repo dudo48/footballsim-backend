@@ -1,11 +1,12 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { TeamsModule } from './teams/teams.module';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 import { MatchesModule } from './matches/matches.module';
+import { RandomModule } from './random/random.module';
 import { SimulationsModule } from './simulations/simulations.module';
+import { TeamsModule } from './teams/teams.module';
 
 @Module({
   imports: [
@@ -22,12 +23,13 @@ import { SimulationsModule } from './simulations/simulations.module';
         database: configService.get('DB_NAME'),
         autoLoadEntities: true,
         synchronize: true,
-        dropSchema: true,
+        // dropSchema: true,
       }),
     }),
     TeamsModule,
     MatchesModule,
     SimulationsModule,
+    RandomModule,
   ],
   controllers: [AppController],
   providers: [AppService],
