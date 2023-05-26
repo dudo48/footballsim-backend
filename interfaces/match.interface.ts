@@ -1,7 +1,7 @@
 import Team from './team.interface';
 
 export default interface Match {
-  id: number;
+  id?: number;
   homeTeam: Team;
   awayTeam: Team;
   onNeutralGround: boolean;

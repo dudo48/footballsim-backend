@@ -1,5 +1,5 @@
 export default interface Team {
-  id: number;
+  id?: number;
   name: string;
   attack: number;
   defense: number;
