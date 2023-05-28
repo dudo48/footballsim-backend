@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MatchesModule } from './matches/matches.module';
+import { NameEntity } from './random/entities/name.entity';
 import { RandomModule } from './random/random.module';
 import { SimulationsModule } from './simulations/simulations.module';
 import { TeamsModule } from './teams/teams.module';
@@ -23,13 +24,14 @@ import { TeamsModule } from './teams/teams.module';
         database: configService.get('DB_NAME'),
         autoLoadEntities: true,
         synchronize: true,
-        // dropSchema: true,
+        dropSchema: true,
       }),
     }),
     TeamsModule,
     MatchesModule,
     SimulationsModule,
     RandomModule,
+    TypeOrmModule.forFeature([NameEntity]),
   ],
   controllers: [AppController],
   providers: [AppService],

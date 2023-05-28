@@ -1,23 +1,10 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { MatchEntity } from 'src/matches/entities/match.entity';
-import MatchSimulator from 'src/utils/simulator';
-import { Repository } from 'typeorm';
+import { Injectable } from '@nestjs/common';
+import { CreateMatchDto } from 'src/matches/dto/create-match.dto';
+import MatchSimulator from 'src/simulations/simulations.match-simulator';
 
 @Injectable()
 export class SimulationsService {
-  constructor(
-    @InjectRepository(MatchEntity)
-    private readonly matchesRepository: Repository<MatchEntity>,
-  ) {}
-
-  async simulate(id: number, n: number) {
-    const match = await this.matchesRepository.findOneBy({ id });
-
-    if (!match) {
-      throw new NotFoundException();
-    }
-
+  async simulateMatch(match: CreateMatchDto, n: number) {
     return [...Array(n)].map(() => MatchSimulator.simulate(match));
   }
 }

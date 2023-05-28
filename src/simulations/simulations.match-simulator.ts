@@ -19,7 +19,11 @@ export default class MatchSimulator {
   static simulate(match: Match) {
     const advantage = match.onNeutralGround ? 1 : match.homeTeam.homeAdvantage;
     const homeTeamXg = this.getXG(match.homeTeam, match.awayTeam, advantage);
-    const awayTeamXg = this.getXG(match.awayTeam, match.homeTeam, 1 / advantage);
+    const awayTeamXg = this.getXG(
+      match.awayTeam,
+      match.homeTeam,
+      1 / advantage,
+    );
 
     const fullTime: Result = {
       home: this.simulateGoals(homeTeamXg),

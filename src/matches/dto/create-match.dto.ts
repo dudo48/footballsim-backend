@@ -1,4 +1,4 @@
-import { IsNotEmpty } from 'class-validator';
+import { IsBoolean, IsNotEmpty } from 'class-validator';
 import { TeamEntity } from 'src/teams/entities/team.entity';
 
 export class CreateMatchDto {
@@ -8,6 +8,6 @@ export class CreateMatchDto {
   @IsNotEmpty()
   awayTeam: TeamEntity;
 
-  @IsNotEmpty()
+  @IsBoolean()
   onNeutralGround: boolean;
 }

@@ -15,7 +15,7 @@ export class RandomService {
   async createRandomTeams(n: number, strength: number, alpha: number) {
     // get random names first
     const names = await this.nameRepository.find();
-    const randomNames = [...Array(n).keys()].map(
+    const randomNames = [...Array(n)].map(
       () => names[random.int(0, names.length - 1)].name,
     );
     return RandomTeamsGenerator.generate({
