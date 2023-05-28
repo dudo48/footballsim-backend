@@ -1,1077 +1,140 @@
-35-e Skola
-A. Lustenau
 AC Ajaccio
 AC Milan
-AD Cantolao
-AFC
-AHFC Royals
-APOEL
-AS Cotonou
-AS Djerba
 AS Roma
-ASPAC
-Aalborg
-Aarau
-Aarhus
-Aberdeen
-Abha
-Academica SC
-Adamstown Rosebud
-Adelaide
-Adelaide City
-Adelaide Olympicest Adelaide
-Aduana
-Aegir
-Afumati
-Akokana
-Akranes
-Akron Togliatti
-Aksu
-Al Adalh
-Al Ain
-Al Batin
-Al Feiha
-Al Khaleej
-Al Sharjah
-Al Taee
-Al-Ettifaq
-Al-Faisaly
-Al-Fateh
-Al-Hilal
-Al-Ittihad FC
-Al-Nassr
-Al-Raed
-Al-Shabab
-Al-Shoalah
-Al-Taawon
-Alashkert
-Alaves
-Albacete
-Albany Rush
-Albirex Niigata
-Alcorcon
-Alcoyano
-Alehda
-Algeciras
-Aliance
-Alianza Atl.
-All Boys
-Almirante Brown
-Altach
-Altitude Rush
-Altona Magic
-Altyn Asyr
-Alushta
-Amorebieta
-Andijan
-Andorra
-Angel City
+Al Ahly
+Al Ittihad
+Al Masry
+Almeria
 Angers
-Anse Reunion
-Anyang
-Apollon Smyrnis
-Ararat-Armenia
-Arba Menche
-Argentina
-Aris
-Arka Gdynia
-Armadale
-Arna-Bjornar
-Arouca
+Arab Contractors
 Arsenal
-Arsenal Sarandi
-Arsenal Tula
-Arua Hillakiso Giants
-Asane
 Aston Villa
+Aswan SC
 Atalanta
-Ateks
-Ath Bilbao B
-Athens Kallithea
-Athletico-PR
-AthloneFC
+Ath Bilbao
 Atl. Madrid
-Atl. Ottawa
-Atl. Tucuman
-Atlantico
-Auckland City
-Aue
 Augsburg
-Augsdaugavas
 Auxerre
-Avai
-Avai Kindermann
-Avaldsnes
-Avondale FC
-Ayema
-Azkals
-Azuaga
-B. Bystrica
 B. Monchengladbach
-B93
-BCH Lions
-BUL
-Baden
-Bahia
-Bai Bureharriors
-Baia Mare
-Bakhmaro Chokhatauri
-Balcatta
-Baleares
-Ballard
-Bangladesh Police
-Bani Ganse
-Banjul Utdallidan
-Baranovici
-Barcelona B
-Basa
-Basel
-Bavarian United
-Bavois
+Barcelona
 Bayer Leverkusen
 Bayern Munich
-Bayswater
-Beasain
-Bebri
-Bellinzona
-Benfica
-Benfica B
-Bentleigh Greens
-Betlemi Keda
-Betsafe
-Bettembourg
-Biel
-Binh Duong
-Birmingham
-Bischofshofen
-Bizertin
-Black Bulls
-Black Rhinos
-Black Rock
-Black Stars
-Blacks Power
-Blooming
-Bo Rangers
-Boavista
+Ben Guerdane
+Berkane
+Betis
 Bochum
-Bohemians
-BohemiansFC
-Bolivar
-Bordeaux
-Borjomi
-Boston Bolts
-Boston City
-Botev Vratsa
-Boulder County
-Bourg en Bresse
-Braga
-Brage
-Brann
-Brazil
-Breda
-Bregenz
-Breidablik
+Bologna
+Bournemouth
+Brentford
 Brest
-Bright Stars
 Brighton
-Brikama U.
-Brommapojkarna
-Brondby
-Bruhl
-Buffalo
-Buffles du Borgou
-Bulawayo Chiefs
-Bulle
-BumProm Gomel
-Bunyodkor
-Burgos CF
-Busoga
-CD Badajoz
-CD Coria
-CDFC Calzada
-CE Manresa
-CF Intercity
-CF Talavera
-CISA
-CO Bamako
-CR Belouizdad
-CRB
-CS Blejoi
 CS Sfaxien
-CSKA Moscow
-CSKA Sofia
-CSM Alexandria
-CSM Deva
-CSM Ramnicu Sarat
-CSM Resita
-CSO Filiasi
-CSO Plopeni
-Cacereno
-Cagliari
-Calahorra
-Campbelltown City
-Canada
-Canberra Olympicest Canberraanderers
-Cangzhouuhan Three Towns
-Carmen Bucuresti
-Carroi
-Casa Pia
-Castellon
-Cavaliers
-Ceahlaul
-Ceara
-Cebu FC
-Celta Vigo B
-Celtic
-Cercle Brugge KSV
-Cesena
-Ceuta
-Chaco For Ever
-Cham
-Champasak United
-Charlestown Azzurri
-Charlotte Independ. 2
-Chaves
-Chelseaest Ham
-Chengdu Rongcheng
-Chenois
-Cheonan City
-Cheongju
-Chernomorets Sevastopol
-Chicago Dutch Lions
-Chitipa United
-Chloraka
-Chrobry Glogow
-Cienciano
-Clarence Zebras
+Cadiz CF
+Celta Vigo
+Ceramica Cleopatra
+Chabab Mohammedia
+Chelsea
 Clermont
-Club A. Guemes
-Club America
-Cockburn City
-Coffrane
-Como
-Compostela
-Concordia
-Cooks Hill United
-Cordoba
-Cork Cityexford Youths Football Club
-Cornella
-Corvinul Hunedoara
-Costa Rica
-Coventry
-Cracoviaisla Plock
-Cranborne Bullets
-Crotone
-Croydon Kings
-Cruzeiro
-Cumbaya
-Cusco
-Customs Utd
-D. Concepcion
-DLRaves
-Da Nang
-Dadje
-Daegu
-Dainava Alytus
-Dalvik/Reynir
-Damac
-Damissa
-Dandenong Thunder
-Davis Legacy
-De Treffers
-Debrecen
-Defence Force
-Dep. La Coruna
-Dep. Municipal
-Deportes Rengo
-Deportivo Garcilaso
-Deportivo Madryn
-Derry City
-Detroit
-Devonport
-Diagoras
-Dijon
-Din. Minsk
-Dinamo Tbilisi 2IT Georgia
-Djoliba
-Dnipro-1
-Dominican Republic
+Club Africain
+Cremonese
+Crystal Palace
+Difaa El Jadidi
 Dortmund
-Dortmundehen
-Douanes Niamey
-Dragons
-Dreams
-Duisburg
-Dunaivtsi
-Duren
-Dusheti
-Dyn. Kyiv
-Dynamo Brest
-Dynamo Makhachkala
-EM Mahdia
-EMC Podolie
-East End Lions
-Echallens
-Eibar
-Eimsbutteler
 Eintracht Frankfurt
-Ejea
-Ekenas
-Ekwendeni Hammers
-Eldense
-Elversberg
-Emmenbrucke
+El Daklyeh
+El Gaish
+El Ismaily
+Elche
 Empoli
-Energetik
-Energetik-BGU
-England
-Entella
-Escheneesen
-Escolaarszawa
-Eskhata
-Espoir
-Estoril
-Estrela
-Estudiantes Rio Cuarto
-Ethio Electric
+Enppi
+Espanyol
+Esperance Tunis
 Etoile Sahel
-Etoile-Carouge
 Everton
-Excelsior Maassluis
-Express
-Extreme FC
-Ezra
-F. Constanta 2
-FC Asgabat
-FC Bihor
-FC Cienfuegos
-FC Guantanamo
+FAR Rabat
 FC Koln
-FC La Habana
-FC Minsk
-FC Porto
-FC Porto B
-FC Rapid Bucuresti
-FC Santiago de Cuba
-FC Sevastopol
-FC Slonim
-FC Tokyo
-FCSB
-FK Cesis
-FK Indjija
-FK Liepaja
-FK Limbazi
-FK Vozdovac
-Fairplay Bucuresti
-Faizkand
-Falcons
-Fello Star
-Ferrol
-Ferroviaria
-Ferroviario Beira
+FUS Rabat
 Fiorentina
-Fjallabyggd
-Fjardabyggd/Leiknir
-Flamengo
-Flamme Olympique
-Fleury 91
-Flora
-Floreat Athena
-Foggia
-Foot Elite
-Foresta Suceava
-Foresters FC
-Forge
-Fortaleza
-Fortis
-Fortune
-Fram
-France
 Freiburg
-Freienbach
-Frosinone
-Fuenlabrada
-GKS Katowice
-Gabala
-Gafsa
-Galway United
-Gardabani
-Gasogi United
-Gefle
-General Velasquez
-Gent
-Germany
-Gernika
-Geylang
-Gia Lai
-Gil Vicente
-Gimnasia L.P.
-Gimnastic
-Glenorchy Knights
-Glens SC
-Gloria 2018 Bistrita
-Gnistan
-Gonio
-Gori
-Gornik Zabrze
-Gossau
-Graficar Beograd
-Granada CF
-Grand-Saconnex
-Grasshopper
-Grau
-Greater Tomorrow
-Gremio
-Grotta
-Guatemala
-Guingamp
-Guria
-Gyeongnam
-HFC
-HJK
-HPS
-Hafia
-Hallescher
-Halmstad
-Hamam-Sousse
-Hammam-Lif
-Hang Yuan
-Hanoi FC
-Hardenberg
-Hartberg
-Hartford Athletic
-Haukar
-Hawassa
-Hearts
-Hegelmann
+Fulham
+Future FC
+Getafe
+Ghazl El Mahallah
+Girona
+Haras El Hodood
+Hassania Agadir
 Hertha Berlin
-Hibernian
-Ho Chi Minh
 Hoffenheim
-Hohenems
-Hokkaido Consadole Sapporo
-Holguin
-Hong Linh Ha Tinh
-Honggettswil-Bonstetten
-Honka
-Honved
-Hottur / Huginn
-Houston Dash
-Houston FC
-Hualien
-Huesca
-Huntsville
-Hvidovre IF
-IJsselmeervogels
-IR Reykjavik
-Illescas
-Ilves
-Incheon
-Ind. Rivadavia
-Inglewood Utd
-Ingolstadt
+IR Tanger
 Inter
-Irao Tbilisi
-Ireland
-Isloch
-Istra 1961
-Italy
-Ituano
-Iwata
-JAK
-JEF United
-JFC Jelgava
-JFK Daugava
-JJK Jyvaskyla
-JaPS
-Jagiellonia
-Jamaica
-Jarabacoa
-Jaro
-Javor
-Jedinstvo U.
-Jeju Utd
-Jekabpils SC
-Jeonnam
-Jeunesse Sportive
-Jong Sparta Rotterdam
-Jong Volendam
-Jonkoping
-Juventude
+Jeunesse Sportive Soualem
 Juventus
-K. Almaty
-KCB
-KFG Gardabaer
-KPV Kokkola
-KR Reykjavik
-KV Reykjavik
-Kachin United
-Kadaga
-Kaerjeng
-Kalaa
-Kamaz
-Kampala City
-Kamsar
-Kansas City Current
-Kaohsiung
-Kapaz
-Kariobangi Sharks
-Karmiotissa
-Karonga United
-Karpaty Lviv
-Kashima Antlers
-Kaspij Aktau
-Katwijk
-Kaya
-Keflavik
-Kelantan
-Khaan Khuns-Erchim
-Khangarid
-Khimki
-Khobi
-Khoromkhon
-Khosilot Parkhar
-Khovd
-Kingborough Lions
-Kings Hammer
-Kofu
-Koge
-KoldingQ
-Kolos Kovalivka
-Kolubara
-Konizohlen
-Kopetdag Asgabat
-Korona Kielce
-Kosova
-Kozakken Boys
-Krasnodar
-Krasnodar 2
-Kremin
-Kreuzlingeninterthur
-Kriens
-Kryvbas
-Kryvbas 2020
-Kuban
-Kuressaare
-Kyoto
-Kyzyltash
-L.R. Vicenza
-LC Bamako
-LNZ Cherkasy
-LSK Kvinner
-LSPA
-La Chaux-De-Fonds
-La Nucia
-La Passe
-Ladomir
-Lake Macquarie
-Lane United
-Langenthal
-Lao Army FC
-Las Palmas
-Las Vegas Lights
-Launceston United
-Lausanne
-Lausanne Ouchy
-Lautaro
-Le Havre
+Lazio
 Lecce
-Lecco
-Lech Poznan
-Lechia G.
-Lechia Gdansk
-Leczna
-Leganes
-Legia
-Legnica
+Leeds
 Leicester
-Leiknir
 Lens
-Leonesa
-Levante
-Libertad
-Libertad Gran Mamore
-Lielupe
 Lille
-Linares
-Linense
-Linth
-Lisse
 Liverpool
-Lok. Plovdiv
-Londrina
-Long An
 Lorient
-Los Angeles FC
-Loznica
-Lugano
-Lugo
-Luton
-Luzern
-Lyn
 Lyon
-MAFCO
-MFC Metalurh
-MOL Fehervar
-Maastricht
-Macva
-Madona/BJSS
-Magra
+Maghreb Fez
 Mainz
-Maitland
-Malaga
+Mallorca
 Manchester City
 Manchester Utd
-Manica
-Manly Utd
-Mannheim
-Maqtaaral
-Mariehamn
-Marimoo
-Maritimo
-Mariupol
-Maroons
 Marseille
-Martigny
-Matanzas
-Matchakhela
-Mathare Utd.
-Maxline
-Melipilla
-Menace
-Meppen
-Merani Martvili 2
-Merida AD
-Merw
-Meshakhte Tkibuli
-Metalist 1925
-Metallurg Bekabad
-Metalul Buzau
-Metlaoui
-Meyrin
-Mightyanderers
-Milo FC
-Mirandes
-Mjallby
-Mladost
-Mladost GAT
-Modbury Jets
-Moknine
+Moghreb Tetouan
 Monaco
-Monaro Panthers
 Monastir
-Monterrey
-Monthey
 Montpellier
-Moreland City
-Mount Druitt Rangers
-Msaken
-Muktijoddha Sangsad
-Mukura Victory Sports
-Munich 1860
-Munsingen
-Murcia
-Muri
-Musanze
-Mushuc Runa
-Myjava
-Mynavi Sendai
-NE Metrostars
-NWS Spirit
-Naestved
-Naftan
-Nagoya Grampus
-Nancy
+Monza
+Mouloudia Oujda
 Nantes
-Nantong Zhiyun
 Napoli
-Napredak
-Navalcarnero
-Nebitci
-Neftekhimik
-Negeri Sembilan
-New Lambton
-New York Red Bulls 2
-New Zealand
-Newcastle Olympic
+National Bank Egypt
+Newcastle
 Nice
-Nigeria
-Njardvik
-Noah
-Nojima Stella
-Noordwijk
-North Carolina FC
-North Geelong
-Nove Zamky
-Numancia
-Nyva Ternopil
-Nzoia Sugar
-ONS Oulu
-OSC Bremerhaven
-Oberhausen
-Oberwallis Naters
-Obolon
-Ocean City
-Ocean Kerch
-Odense Q
-Ogre United
-Olafsvik
-Old Edwardians
-Oleksandriya
-Oly Town
-Olympic Kingsway
-Omiya Ardija
-Onduparaka FC
-Oostzaan
-Orenburg
-Orense
-Orgryte
-Orlando Pirates
-Osasuna B
-Osijek
-Ostrovets
-Ourense CF
-PK-35 Helsinki
-PK-35 Vantaa
-PVF-CAND
-Pachuca
-Pacos Ferreira
-Palmaflor
-Palmeiras
-Panama
-Panathinaikos B
-Panthers FC Uman
-Paradiso
-Parceiro Nagano
-Paris FC
+Nottingham
+Olympique Beja
+Olympique Khouribga
+Olympique de Safi
+Osasuna
 Paris SG
-Park City
-Partizan
-Pathfinder
-Peamount
-Penafiel
-Penya Independent
-Peoriaichita
-Perth Glory
-Perth RedStar
-Perth SC
-Pescara
-Philadelphia Lone Star
-Phoenix Rising
-Piast Gliwice
-Pirin Blagoevgrad
-Platinum
-Plavinas
-Plzen
-Pogon Szczecin
-Poland
-Polonia.isla
-Pomigliano
-Pontevedra
-Popesti Leordeni
-Pordenone
-Port Melbourne Sharks
-Portalban
-Portimonense
-Portland Thorns
-Posta Rangers
-Poti
-Puskas Academy
-Quick Boys
-R. Oviedo
-R. Rzeszow
-R. Sociedad B
-R. Union
+Pharco
+Pyramids
 RB Leipzig
-RKC SC
-RW Essen
-Racing Club Villalbes
-Radnicki Beograd
-Radnicki Nis
-Radnicki S. Mitrovica
-Radnik
-Radomiak Radom
-Rahmatgonj MFS
-Rakow
-Rakow Czestochowa
-Rangers
-Rapperswil
-Rayo Majadahonda
-Reading
-Real Aviles
-Real Bamako
+Raja Casablanca
+Rayo Vallecano
 Real Madrid
-Real Madrid B
-Real Monarchs
-Real Republicans
-Real San Joaquin
-Regar-TadAZ
-Reign
+Real Sociedad
 Reims
 Rennes
-Requins
-Riedolfsberger AC
-Rijeka
-Rijnsburgse Boys
-Riteriai
-Roa
-Rodez AF
-Rodina Moscow
-Rosenborg
-Rotkreuz
-Rubin Kazan
-Rubin Yalta
-Ruch Chorzow
-Ruzomberok
-SD Logrones
-SG Dynamo Dresden
-SKA Khabarovsk
-SS Sfaxien
-Saalfelden
-Saarbrucken
-Sabadell
-Sabail
-Saburtalo Tbilisi 2
-Sacramento Republic
-Sagan Tosu
-SalPa
-Salaspils FK
 Salernitana
-Salt City
-Samartex
 Sampdoria
-San Diegoave
-San Fernando
-San Francisco City
-San Martin T.
-San Sebastian Reyes
-San Telmo
-Sanfrecce Hiroshima
-Santa Clara
-Santos
-Sao Paulo
-Sarmiento Junin
-Sarraz-Ecleplens
 Sassuolo
-Satelliteakriya
-Schaffhausenil
 Schalke
-Scheveningen
-Schotz
-Sekhukhune
-Selangor
-Selfoss
-Seongnam
-Sequence
-Serbia
-Servette
-Servette Geneve FC
 Sevilla
-Shakhtar Donetsk
-Shakhter Karagandy
-Shamakhi
-Shamrock Rovers
-Shan Utdillem
-Shelbourne
-Shinnik Yaroslavl
-Shonan Bellmare
-Shukura 2
-Siauliai FA
-Sidi Bouzid
-Sigma Olomouc
-Sindri
-Sion
-Sirius
-Skovde AIK
-Slaskroclaw
-Slaven Belupo
-Slavia Prague
-Sligo Rovers
-Sloboda
-Slovacko
-Sochi
-Sofapaka
-Soimii Lipova
-Soliman
-Solothurn
-Sorrento
-South Adelaide
-South Hobart
-Soyaux
-Sp. Subotica
-SpVgg Bayreuth
-Spain
-Spakenburg
-Sparta Prague
-Sparta-KT
+Smouha
+Southampton
 Spezia
-Sport Boys
-Sporting Ben Arous
-Sporting CP
-Sporting Kansas City
-St Albans
-St Michel United
-St. Gallen
-St. George City
-St. Liege
-St. Mirren
-Stabaek
-Stade Gabesien
-Stade Nyonnais
-Stade Tunisien
-Stal Mielecarta Poznanidzew Lodz
-Stallion
-Stirling Macedonia
-Stjarnan
 Strasbourg
-Sturt Lions
 Stuttgart
-Sumqayit
-Sundby
-Sundsvall
-Super Nova
-Suva
-Suwon Bluewings
-Switzerland
-Sydney Olympic
-Sydney Utd
-TEC
-TPS
-TSK Simferopol
-Tacoma Defiance
-Taichung Blue
-Taipei Bravo
-Takunnin
-Tallinna Kalev
-Tamale City
-Tammeka
-Taoyuan
-Tarazona
-Taverne
-Tbilisi City
-Team Rhino
-Tecnico U.
-Terengganu
-Termalica B-B
-Terre Sainte
-Thisted FC
-Thor/KA
-Throttur
-Throttur Vogar
-Thun
-Tigers FC
-Tindastoll
-Tirol
-Topolcany GFC
 Torino
-Torpedo Moscow
-Torrent
 Tottenham
 Toulouse
-Trasandino
-Tre Penne
-Treaty Utd
-Trelleborg
-Trencin
-Trnava
 Troyes
-Tskhumi Sokhumi
-Tucsoneston
-Tuggen
-Tukums 2000
-Tunari
-Turon
-Tuv Buganuud
-U. Catolica
-U.A.N.L.- Tigres
-UD Ibiza
-UD Logrones
-UE Engordany
-UPDF
-URA SC
-US Bougouni
-US Gendarmerie
 US Tataouine
-USA
-USFAS Bamako
 Udinese
-Ufa
-Ujpest
-Ulyanovsk
-Union Berlinerder Bremenolfsburg
-Unionistas
-Unirea Ungheni
-United PDX
-Ural
-Urana
-Urartu
-Urawa
-Urawa Reds
-Uthai Thani
-Uzbekistan
-Uzwil
-V-Varen Nagasaki
-Vaduz
-Valdivia
-Valencia B
-Valentine
-Valerenga
-Valmiera
-Valur
-Vasas
-Vasas Odorhei
-Vasco
-Vasteras SK
-Veles Moscow
-Vendsyssel
-Venezia
-Venlo
-Ventura
-Veres-Rivne
-Verl
-Vermont Green
+Union Berlin
+Union Touarga
+Valencia
+Valladolid
 Verona
-Vevey
-VfB Oldenburg
-VfL Osnabruck
-Viitorul Daesti
-Vikingur Reykjavik
-Viktoria Koln
-Villa
-Villa Dalmine
-Villarreal B
-Vimenor
-Vipers
-Virtus
-Vissel Kobe
-Vitebsk
-Vitoria
-Vitoria Guimaraes
-Vizela
-Volgar-Astrakhan
-Volna Pinsk
-Volsungur
-Vorskla Poltava
-Wilberforce Strikers
-Xamax
-YF Juventus
-Yadah
-Yenisey
-Young Boys
-Young Elephant
-Young Lions
-Yverdon
-Zaglebie
-Zaragoza B
-Zarzis
-Zeleznicar Pancevo
-Zenit
-Zhetysu Taldykorgan
-Zhodino Yuzhnoeesterlo
-Zhytomyr
-Zilina
-Zira
-Zlatibor Cajetina
-Zorya
-Zurich
-Zwickau
+Villarreal
+Werder Bremen
+West Ham
+Wolfsburg
+Wolves
+Wydad
+Zamalek
