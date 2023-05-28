@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
-import { SimulationsService } from './simulations.service';
-import { SimulationsController } from './simulations.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { MatchEntity } from 'src/matches/entities/match.entity';
+import { TeamEntity } from 'src/teams/entities/team.entity';
+import { SimulationsController } from './simulations.controller';
+import { SimulationsService } from './simulations.service';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([MatchEntity])],
+  imports: [TypeOrmModule.forFeature([TeamEntity])],
   controllers: [SimulationsController],
   providers: [SimulationsService],
 })
