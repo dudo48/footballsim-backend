@@ -1,15 +1,20 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import random from 'random/dist/cjs/random';
+import { NameEntity } from 'src/teams/entities/name.entity';
+import { Repository } from 'typeorm';
 import { CreateTeamDto } from './dto/create-team.dto';
 import { UpdateTeamDto } from './dto/update-team.dto';
-import { InjectRepository } from '@nestjs/typeorm';
 import { TeamEntity } from './entities/team.entity';
-import { Repository } from 'typeorm';
+import RandomTeamsGenerator from './teams.random';
 
 @Injectable()
 export class TeamsService {
   constructor(
     @InjectRepository(TeamEntity)
     private readonly repository: Repository<TeamEntity>,
+    @InjectRepository(NameEntity)
+    private readonly nameRepository: Repository<NameEntity>,
   ) {}
 
   create(createTeamDto: CreateTeamDto) {
@@ -18,6 +23,19 @@ export class TeamsService {
 
   createMultiple(teams: CreateTeamDto[]) {
     return this.repository.save(teams);
+  }
+
+  async createRandomTeams(n: number, strength: number, alpha: number) {
+    // get random names first
+    const names = await this.nameRepository.find();
+    const randomNames = [...Array(n)].map(
+      () => names[random.int(0, names.length - 1)].name,
+    );
+    return RandomTeamsGenerator.generate({
+      names: randomNames,
+      strength,
+      alpha,
+    });
   }
 
   findAll() {

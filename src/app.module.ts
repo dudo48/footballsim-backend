@@ -4,9 +4,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MatchesModule } from './matches/matches.module';
-import { NameEntity } from './random/entities/name.entity';
-import { RandomModule } from './random/random.module';
 import { SimulationsModule } from './simulations/simulations.module';
+import { NameEntity } from './teams/entities/name.entity';
 import { TeamsModule } from './teams/teams.module';
 
 @Module({
@@ -30,7 +29,6 @@ import { TeamsModule } from './teams/teams.module';
     TeamsModule,
     MatchesModule,
     SimulationsModule,
-    RandomModule,
     TypeOrmModule.forFeature([NameEntity]),
   ],
   controllers: [AppController],

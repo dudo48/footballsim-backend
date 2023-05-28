@@ -1,16 +1,17 @@
 import {
-  Controller,
-  Get,
-  Post,
   Body,
-  Patch,
-  Param,
+  Controller,
   Delete,
+  Get,
+  Param,
   ParseArrayPipe,
+  Patch,
+  Post,
+  Query,
 } from '@nestjs/common';
-import { TeamsService } from './teams.service';
 import { CreateTeamDto } from './dto/create-team.dto';
 import { UpdateTeamDto } from './dto/update-team.dto';
+import { TeamsService } from './teams.service';
 
 @Controller('teams')
 export class TeamsController {
@@ -31,6 +32,19 @@ export class TeamsController {
   @Get()
   findAll() {
     return this.teamsService.findAll();
+  }
+
+  @Get('random')
+  createRandomTeam(
+    @Query('n') n: string,
+    @Query('k') k: string,
+    @Query('a') a: string,
+  ) {
+    return this.teamsService.createRandomTeams(
+      Math.max(+n, 1) || 1,
+      Math.max(+k, 1) || 1,
+      Math.max(+a, 1) || 4,
+    );
   }
 
   @Get(':id')

@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import MatchSimulator from 'src/simulations/simulations.match-simulator';
 import { TeamEntity } from 'src/teams/entities/team.entity';
 import { Repository } from 'typeorm';
-import { SimulateMatchDto } from './dto/simulate-match.dto';
+import { QuickMatchDto } from './dto/quick-match.dto';
 
 @Injectable()
 export class SimulationsService {
@@ -12,7 +12,7 @@ export class SimulationsService {
     private readonly teamRepository: Repository<TeamEntity>,
   ) {}
 
-  async simulateMatch(match: SimulateMatchDto, n: number) {
+  async simulateQuickMatch(match: QuickMatchDto, n: number) {
     const homeTeam = await this.teamRepository.findOneBy({
       id: match.homeTeam,
     });

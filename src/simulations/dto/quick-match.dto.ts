@@ -1,6 +1,6 @@
 import { IsBoolean, IsNotEmpty } from 'class-validator';
 
-export class SimulateMatchDto {
+export class QuickMatchDto {
   @IsNotEmpty()
   homeTeam: number;
 
