@@ -1,4 +1,3 @@
-import { Transform } from 'class-transformer';
 import Team from 'interfaces/team.interface';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
@@ -10,16 +9,44 @@ export class TeamEntity implements Team {
   @Column()
   name: string;
 
-  @Column({ type: 'real', default: 1 })
-  @Transform(({ value }) => +value.toFixed(1))
+  @Column({
+    type: 'float',
+    transformer: {
+      to(value) {
+        return value.toFixed(1);
+      },
+      from(value) {
+        return value;
+      },
+    },
+  })
   attack: number;
 
-  @Column({ type: 'real', default: 1 })
-  @Transform(({ value }) => +value.toFixed(1))
+  @Column({
+    type: 'float',
+    transformer: {
+      to(value) {
+        return value.toFixed(1);
+      },
+      from(value) {
+        return value;
+      },
+    },
+  })
   defense: number;
 
-  @Column({ name: 'home_advantage', type: 'real', default: 1.2 })
-  @Transform(({ value }) => +value.toFixed(1))
+  @Column({
+    name: 'home_advantage',
+    type: 'float',
+    transformer: {
+      to(value) {
+        return value.toFixed(1);
+      },
+      from(value) {
+        return value;
+      },
+    },
+  })
   homeAdvantage: number;
 
   @Column({ default: '#ffffff' })
