@@ -11,7 +11,7 @@ export default class RandomTeamsGenerator {
   static generate(data: TeamGenerationParameters) {
     const getRandom = random.pareto(data.alpha);
 
-    const n = 10;
+    const n = 32;
     // multiply by two so that the mean is 1 not 0.5
     const getNoise = () => random.bates(n)() * 2;
 
