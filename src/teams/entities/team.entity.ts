@@ -13,6 +13,7 @@ export class TeamEntity implements Team {
     type: 'float',
     transformer: {
       to(value) {
+        // const v = Math.min(Math.max(value, MIN_STRENGTH), MAX_STRENGTH);
         return value.toFixed(1);
       },
       from(value) {
@@ -26,6 +27,7 @@ export class TeamEntity implements Team {
     type: 'float',
     transformer: {
       to(value) {
+        // const v = Math.min(Math.max(value, MIN_STRENGTH), MAX_STRENGTH);
         return value.toFixed(1);
       },
       from(value) {

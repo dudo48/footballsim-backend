@@ -1,4 +1,5 @@
 import { Body, Controller, Post, Query } from '@nestjs/common';
+import { MAX_SIMULATIONS, MIN_SIMULATIONS } from 'src/utils/constants';
 import { QuickMatchDto } from './dto/quick-match.dto';
 import { SimulationsService } from './simulations.service';
 
@@ -10,7 +11,8 @@ export class SimulationsController {
   simulateMatch(@Body() match: QuickMatchDto, @Query('n') n: string) {
     return this.simulationsService.simulateQuickMatch(
       match,
-      Math.max(+n, 1) || 1,
+      Math.min(Math.max(+n, MIN_SIMULATIONS), MAX_SIMULATIONS) ||
+        MIN_SIMULATIONS,
     );
   }
 }
