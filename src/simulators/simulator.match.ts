@@ -3,6 +3,7 @@ import MatchResult from 'interfaces/matchResult.interface';
 import Result from 'interfaces/result.interface';
 import Team from 'interfaces/team.interface';
 import random from 'random/dist/cjs/random';
+import { AVERAGE_MATCH_GOALS } from 'src/utils/constants';
 
 export default class MatchSimulator {
   // algorithm to generate goals from xg
@@ -12,7 +13,11 @@ export default class MatchSimulator {
   }
 
   private static getXG(attacker: Team, defender: Team, advantage: number) {
-    return (attacker.attack / defender.defense) * advantage;
+    return (
+      (attacker.attack / defender.defense) *
+      (AVERAGE_MATCH_GOALS / 2) *
+      advantage
+    );
   }
 
   // simulate full match

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import Match from 'interfaces/match.interface';
-import MatchSimulator from 'src/simulations/simulations.match-simulator';
+import MatchSimulator from 'src/simulators/simulator.match';
 
 @Injectable()
 export class SimulationsService {
