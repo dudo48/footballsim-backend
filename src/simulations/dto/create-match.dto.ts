@@ -10,4 +10,10 @@ export class CreateMatchDto {
 
   @IsBoolean()
   onNeutralGround: boolean;
+
+  @IsBoolean()
+  allowExtraTime: boolean;
+
+  @IsBoolean()
+  isKnockout: boolean;
 }

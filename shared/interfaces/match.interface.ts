@@ -5,6 +5,10 @@ export default interface Match {
   id?: number;
   homeTeam: Team;
   awayTeam: Team;
-  result?: MatchResult;
+
   onNeutralGround: boolean;
+  allowExtraTime: boolean;
+  isKnockout: boolean;
+
+  result?: MatchResult;
 }

@@ -3,7 +3,6 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { MatchesModule } from './matches/matches.module';
 import { SimulationsModule } from './simulations/simulations.module';
 import { NameEntity } from './teams/entities/name.entity';
 import { TeamsModule } from './teams/teams.module';
@@ -27,7 +26,6 @@ import { TeamsModule } from './teams/teams.module';
       }),
     }),
     TeamsModule,
-    MatchesModule,
     SimulationsModule,
     TypeOrmModule.forFeature([NameEntity]),
   ],

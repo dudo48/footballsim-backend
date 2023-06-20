@@ -1,4 +1,4 @@
-import Name from 'interfaces/name.interface';
+import Name from 'shared/interfaces/name.interface';
 import { Entity, PrimaryColumn } from 'typeorm';
 
 @Entity()

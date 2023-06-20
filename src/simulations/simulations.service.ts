@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import Match from 'interfaces/match.interface';
+import Match from 'shared/interfaces/match.interface';
 import MatchSimulator from 'src/simulators/simulator.match';
 
 @Injectable()
