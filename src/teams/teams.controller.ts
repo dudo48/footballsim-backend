@@ -61,4 +61,9 @@ export class TeamsController {
   remove(@Param('id') id: string) {
     return this.teamsService.remove(+id);
   }
+
+  @Delete()
+  removeAll() {
+    return this.teamsService.removeAll();
+  }
 }

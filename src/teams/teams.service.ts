@@ -53,4 +53,8 @@ export class TeamsService {
   remove(id: number) {
     return this.repository.delete({ id });
   }
+
+  removeAll() {
+    return this.repository.delete({});
+  }
 }
