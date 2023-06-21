@@ -1,5 +1,7 @@
 import { Injectable } from '@nestjs/common';
+import Cup from 'shared/interfaces/cup.interface';
 import Match from 'shared/interfaces/match.interface';
+import CupSimulator from 'src/simulators/simulator.cup';
 import MatchSimulator from 'src/simulators/simulator.match';
 
 @Injectable()
@@ -9,6 +11,14 @@ export class SimulationsService {
       id: i + 1,
       ...match,
       result: MatchSimulator.simulate(match),
-    }));
+    })) as Match[];
+  }
+
+  async simulateCup(cup: Cup) {
+    return {
+      id: 1,
+      ...cup,
+      result: { rounds: CupSimulator.simulate(cup) },
+    } as Cup;
   }
 }
