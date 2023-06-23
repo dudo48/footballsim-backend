@@ -1,7 +1,13 @@
-import { IsNotEmpty } from 'class-validator';
+import { IsArray, IsBoolean, IsNumber } from 'class-validator';
 import { TeamEntity } from 'src/teams/entities/team.entity';
 
 export class CreateCupDto {
-  @IsNotEmpty()
+  @IsArray()
   teams: TeamEntity[];
+
+  @IsNumber()
+  seeds: number;
+
+  @IsBoolean()
+  allowExtraTime: boolean;
 }

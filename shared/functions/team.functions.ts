@@ -5,5 +5,5 @@ export function getAttackToDefenseRatio(team: Team) {
 }
 
 export function getStrength(team: Team) {
-  return +((team.attack + team.defense) / 2).toFixed(2);
+  return (team.attack + team.defense) / 2;
 }

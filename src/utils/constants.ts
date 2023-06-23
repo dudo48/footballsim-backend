@@ -1,8 +1,11 @@
 export const MIN_STRENGTH = 0.1;
 export const MAX_STRENGTH = 100;
 
-export const MIN_SIMULATIONS = 1;
-export const MAX_SIMULATIONS = 1000;
+export const MIN_MATCH_SIMULATIONS = 1;
+export const MAX_MATCH_SIMULATIONS = 1000;
+
+export const MIN_COMPETITION_SIMULATIONS = 1;
+export const MAX_COMPETITION_SIMULATIONS = 20;
 
 export const AVERAGE_MATCH_GOALS = 2.1;
 export const AVERAGE_PENALTY_SHOOTOUT_GOALS = 8;

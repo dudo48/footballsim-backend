@@ -14,11 +14,11 @@ export class SimulationsService {
     })) as Match[];
   }
 
-  async simulateCup(cup: Cup) {
-    return {
-      id: 1,
+  async simulateCup(cup: Cup, n: number) {
+    return [...Array(n)].map((_, i) => ({
+      id: i + 1,
       ...cup,
       result: { rounds: CupSimulator.simulate(cup) },
-    } as Cup;
+    })) as Cup[];
   }
 }
