@@ -13,3 +13,16 @@ export function getWinner(match: Match) {
 
   return null;
 }
+
+export function getLoser(match: Match) {
+  const result = match.result;
+  if (!result) throw new Error('result is undefined');
+
+  if (isWin(result)) {
+    return match.awayTeam;
+  } else if (isLoss(result)) {
+    return match.homeTeam;
+  }
+
+  return null;
+}

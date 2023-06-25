@@ -18,7 +18,7 @@ export class SimulationsService {
     return [...Array(n)].map((_, i) => ({
       id: i + 1,
       ...cup,
-      result: { rounds: CupSimulator.simulate(cup) },
+      result: CupSimulator.simulate(cup),
     })) as Cup[];
   }
 }

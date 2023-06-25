@@ -39,9 +39,8 @@ export default class MatchSimulator {
     advantage: number,
   ) {
     return (
-      Math.cbrt(attacker.attack / defender.defense) *
-      (AVERAGE_PENALTY_SHOOTOUT_GOALS / 2) *
-      advantage
+      Math.cbrt(MatchSimulator.getXG(attacker, defender, advantage)) *
+      (AVERAGE_PENALTY_SHOOTOUT_GOALS / 2)
     );
   }
 
