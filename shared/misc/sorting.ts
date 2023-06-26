@@ -15,5 +15,9 @@ export const teamSorts: { [key: string]: (a: Team, b: Team) => number } = {
 export const rankingSorts: {
   [key: string]: (a: Ranking, b: Ranking) => number;
 } = {
-  goalsDiff: (a, b) => b.points - a.points || getGoalsDiff(b) - getGoalsDiff(a),
+  goalsDiff: (a, b) =>
+    b.points - a.points ||
+    getGoalsDiff(b) - getGoalsDiff(a) ||
+    b.goalsFor - a.goalsFor ||
+    a.team.name.localeCompare(b.team.name),
 };

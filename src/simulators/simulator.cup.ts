@@ -1,5 +1,9 @@
-import { chunk, flatten, last, shuffle } from 'lodash';
-import { getLoser, getWinner } from 'shared/functions/match.functions';
+import { chunk, flatten, last, random, shuffle } from 'lodash';
+import {
+  getAwayMatch,
+  getLoser,
+  getWinner,
+} from 'shared/functions/match.functions';
 import { getTotalGoals } from 'shared/functions/result.functions';
 import Cup from 'shared/interfaces/cup.interface';
 import Match from 'shared/interfaces/match.interface';
@@ -70,7 +74,7 @@ export default class CupSimulator {
   private static computeStandings(standings: Standings, round: Round) {
     const newStandings = {
       // perform deep cloning
-      table: standings.table.map((r) => ({ ...r })),
+      table: standings.table.map((ranking) => ({ ...ranking })),
       roundId: round.id,
     };
     round.matches.forEach((match) =>
@@ -78,7 +82,7 @@ export default class CupSimulator {
     );
     newStandings.table
       .sort(rankingSorts.goalsDiff)
-      .forEach((r, i) => (r.position = i + 1));
+      .forEach((ranking, i) => (ranking.position = i + 1));
     return newStandings;
   }
 
@@ -87,9 +91,9 @@ export default class CupSimulator {
     let standings: Standings = {
       roundId: rounds[0].id - 1,
       table: cup.teams.map(
-        (team) =>
+        (team, i) =>
           ({
-            position: 1,
+            position: i + 1,
             team,
             matchesPlayed: 0,
             wins: 0,
@@ -127,7 +131,7 @@ export default class CupSimulator {
     let roundId = 0;
     while (remainingTeams.length > 1) {
       const matches: Match[] = chunk(remainingTeams, 2).map((pair) => {
-        const match: Match = {
+        let match: Match = {
           id: ++matchId,
           homeTeam: pair[0],
           awayTeam: pair[1],
@@ -135,6 +139,11 @@ export default class CupSimulator {
           allowExtraTime: cup.allowExtraTime,
           isKnockout: true,
         };
+
+        // randomly swap opponent teams
+        if (random()) {
+          match = getAwayMatch(match);
+        }
 
         return { ...match, result: MatchSimulator.simulate(match) };
       });

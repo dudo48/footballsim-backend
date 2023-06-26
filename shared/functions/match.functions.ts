@@ -26,3 +26,11 @@ export function getLoser(match: Match) {
 
   return null;
 }
+
+export function getAwayMatch(match: Match) {
+  return {
+    ...match,
+    homeTeam: match.awayTeam,
+    awayTeam: match.homeTeam,
+  } as Match;
+}
