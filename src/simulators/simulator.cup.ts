@@ -2,9 +2,9 @@ import { chunk, flatten, last, random, shuffle } from 'lodash';
 import {
   getAwayMatch,
   getLoser,
+  getTotalGoals,
   getWinner,
 } from 'shared/functions/match.functions';
-import { getTotalGoals } from 'shared/functions/result.functions';
 import Cup from 'shared/interfaces/cup.interface';
 import Match from 'shared/interfaces/match.interface';
 import Ranking from 'shared/interfaces/ranking.interface';
@@ -42,7 +42,10 @@ export default class CupSimulator {
   }
 
   // update standings table according to one match
-  private static updateStatistics(standings: Standings, match: Match) {
+  private static updateStatistics(
+    standings: Standings,
+    match: Required<Match>,
+  ) {
     const homeTeam = standings.table.find(
       (r) => r.team.id === match.homeTeam.id,
     ) as Ranking;
@@ -77,11 +80,11 @@ export default class CupSimulator {
       table: standings.table.map((ranking) => ({ ...ranking })),
       roundId: round.id,
     };
-    round.matches.forEach((match) =>
+    round.matches.forEach((match: Required<Match>) =>
       this.updateStatistics(newStandings, match),
     );
     newStandings.table
-      .sort(rankingSorts.goalsDiff)
+      .sort(rankingSorts.standard)
       .forEach((ranking, i) => (ranking.position = i + 1));
     return newStandings;
   }
@@ -149,7 +152,9 @@ export default class CupSimulator {
       });
 
       rounds.push({ id: ++roundId, matches });
-      remainingTeams = matches.map((m) => getWinner(m) as Team);
+      remainingTeams = matches.map(
+        (m: Required<Match>) => getWinner(m) as Team,
+      );
     }
 
     return rounds;

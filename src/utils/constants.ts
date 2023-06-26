@@ -8,7 +8,7 @@ export const MIN_COMPETITION_SIMULATIONS = 1;
 export const MAX_COMPETITION_SIMULATIONS = 1;
 
 // for a match of two teams of roughly the same strength
-export const AVERAGE_MATCH_GOALS = 2.5;
+export const AVERAGE_MATCH_GOALS = 2.2;
 export const AVERAGE_PENALTY_SHOOTOUT_GOALS = 10;
 
 export const STANDARD_TIME_MINUTES = 90;

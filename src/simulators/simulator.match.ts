@@ -1,7 +1,6 @@
 import random from 'random/dist/cjs/random';
-import { isDraw } from 'shared/functions/result.functions';
-import Match from 'shared/interfaces/match.interface';
-import MatchResult from 'shared/interfaces/matchResult.interface';
+import { isDraw } from 'shared/functions/match.functions';
+import Match, { MatchResult } from 'shared/interfaces/match.interface';
 import Result from 'shared/interfaces/result.interface';
 import Team from 'shared/interfaces/team.interface';
 import {

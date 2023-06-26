@@ -9,17 +9,17 @@ interface TeamGenerationParameters {
 
 export default class RandomTeamsGenerator {
   static generate(data: TeamGenerationParameters) {
-    const getRandom = random.pareto(data.alpha);
+    const pareto = random.pareto(data.alpha);
 
     const n = 32;
     // multiply by two so that the mean is 1 not 0.5
-    const getNoise = () => random.bates(n)() * 2;
+    const noise = () => random.bates(n)() * 2;
 
     const teams = data.names.map((name) => {
       // attack and defense are related
-      const strength = getRandom() * data.strength;
-      const attack = Math.max(+(strength * getNoise()).toFixed(1), 0.1);
-      const defense = Math.max(+(strength * getNoise()).toFixed(1), 0.1);
+      const strength = pareto() * data.strength;
+      const attack = Math.max(+(strength * noise()).toFixed(1), 0.1);
+      const defense = Math.max(+(strength * noise()).toFixed(1), 0.1);
 
       return {
         name,

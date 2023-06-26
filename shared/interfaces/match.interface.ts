@@ -1,5 +1,11 @@
-import MatchResult from './matchResult.interface';
+import Result from './result.interface';
 import Team from './team.interface';
+
+export interface MatchResult {
+  standardTime: Result;
+  extraTime?: Result;
+  penaltyShootout?: Result;
+}
 
 export default interface Match {
   id: number;
