@@ -24,7 +24,7 @@ export default class CupSimulator {
       Math.max(sortedTeams.length / cup.seeds, 1),
     );
 
-    // shuffle each pot then zip them together
+    // shuffle each pot
     pots = pots.map((p) => shuffle(p));
     const seededTeams = flatten(pots);
 
