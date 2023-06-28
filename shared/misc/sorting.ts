@@ -10,48 +10,48 @@ import {
 import { getGoalsDiff } from '../functions/ranking.functions';
 import { getStrength } from '../functions/team.functions';
 
-export const teamSorts: { [key: string]: (a: Team, b: Team) => number } = {
-  default: () => 0,
-  name: (a, b) => a.name.localeCompare(b.name),
-  attack: (a, b) => a.attack - b.attack,
-  defense: (a, b) => a.defense - b.defense,
-  homeAdvantage: (a, b) => a.homeAdvantage - b.homeAdvantage,
-  strength: (a, b) => getStrength(a) - getStrength(b),
-};
+export const sorts = {
+  team: {
+    default: () => 0,
+    name: (a: Team, b: Team) => a.name.localeCompare(b.name),
+    attack: (a: Team, b: Team) => a.attack - b.attack,
+    defense: (a: Team, b: Team) => a.defense - b.defense,
+    homeAdvantage: (a: Team, b: Team) => a.homeAdvantage - b.homeAdvantage,
+    strength: (a: Team, b: Team) => getStrength(a) - getStrength(b),
+  },
+  match: {
+    default: () => 0,
+    id: (a: Match, b: Match) => a.id - b.id,
+    result: (a: Required<Match>, b: Required<Match>) =>
+      getTotalGoalsDiff(a.result, true) - getTotalGoalsDiff(b.result, true) ||
+      Math.max(getTotalGoals(a.result).home, getTotalGoals(a.result).away) -
+        Math.max(getTotalGoals(b.result).home, getTotalGoals(b.result).away),
+    strength: (a: Match, b: Match) => getMatchStrength(a) - getMatchStrength(b),
+    goals: (a: Required<Match>, b: Required<Match>) =>
+      getSummedGoals(a.result) - getSummedGoals(b.result) ||
+      Math.max(getTotalGoals(a.result).home, getTotalGoals(a.result).away) -
+        Math.max(getTotalGoals(b.result).home, getTotalGoals(b.result).away),
+  },
+  ranking: {
+    default: () => 0,
+    position: (a: Ranking, b: Ranking) => a.position - b.position,
+    teamName: (a: Ranking, b: Ranking) =>
+      a.team.name.localeCompare(b.team.name),
+    matchesPlayed: (a: Ranking, b: Ranking) =>
+      a.matchesPlayed - b.matchesPlayed,
+    wins: (a: Ranking, b: Ranking) => a.wins - b.wins,
+    draws: (a: Ranking, b: Ranking) => a.draws - b.draws,
+    losses: (a: Ranking, b: Ranking) => a.losses - b.losses,
+    goalsFor: (a: Ranking, b: Ranking) => a.goalsFor - b.goalsFor,
+    goalsAgainst: (a: Ranking, b: Ranking) => a.goalsAgainst - b.goalsAgainst,
+    goalsDiff: (a: Ranking, b: Ranking) => getGoalsDiff(a) - getGoalsDiff(b),
+    points: (a: Ranking, b: Ranking) => a.points - b.points,
 
-export const matchSorts: { [key: string]: (a: Match, b: Match) => number } = {
-  default: () => 0,
-  id: (a, b) => a.id - b.id,
-  result: (a: Required<Match>, b: Required<Match>) =>
-    getTotalGoalsDiff(a.result, true) - getTotalGoalsDiff(b.result, true) ||
-    Math.max(getTotalGoals(a.result).home, getTotalGoals(a.result).away) -
-      Math.max(getTotalGoals(b.result).home, getTotalGoals(b.result).away),
-  strength: (a, b) => getMatchStrength(a) - getMatchStrength(b),
-  goals: (a: Required<Match>, b: Required<Match>) =>
-    getSummedGoals(a.result) - getSummedGoals(b.result) ||
-    Math.max(getTotalGoals(a.result).home, getTotalGoals(a.result).away) -
-      Math.max(getTotalGoals(b.result).home, getTotalGoals(b.result).away),
-};
-
-export const rankingSorts: {
-  [key: string]: (a: Ranking, b: Ranking) => number;
-} = {
-  default: () => 0,
-  position: (a, b) => a.position - b.position,
-  teamName: (a, b) => a.team.name.localeCompare(b.team.name),
-  matchesPlayed: (a, b) => a.matchesPlayed - b.matchesPlayed,
-  wins: (a, b) => a.wins - b.wins,
-  draws: (a, b) => a.draws - b.draws,
-  losses: (a, b) => a.losses - b.losses,
-  goalsFor: (a, b) => a.goalsFor - b.goalsFor,
-  goalsAgainst: (a, b) => a.goalsAgainst - b.goalsAgainst,
-  goalsDiff: (a, b) => getGoalsDiff(a) - getGoalsDiff(b),
-  points: (a, b) => a.points - b.points,
-
-  // complex sorts
-  standard: (a, b) =>
-    b.points - a.points ||
-    getGoalsDiff(b) - getGoalsDiff(a) ||
-    b.goalsFor - a.goalsFor ||
-    a.team.name.localeCompare(b.team.name),
+    // complex sorts
+    standard: (a: Ranking, b: Ranking) =>
+      b.points - a.points ||
+      getGoalsDiff(b) - getGoalsDiff(a) ||
+      b.goalsFor - a.goalsFor ||
+      a.team.name.localeCompare(b.team.name),
+  },
 };

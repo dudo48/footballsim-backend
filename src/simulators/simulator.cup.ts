@@ -1,6 +1,5 @@
 import { chunk, flatten, last, random, shuffle } from 'lodash';
 import {
-  getAwayMatch,
   getLoser,
   getTotalGoals,
   getWinner,
@@ -11,14 +10,14 @@ import Ranking from 'shared/interfaces/ranking.interface';
 import Round from 'shared/interfaces/round.interface';
 import Standings from 'shared/interfaces/standings.interface';
 import Team from 'shared/interfaces/team.interface';
-import { rankingSorts, teamSorts } from 'shared/misc/sorting';
+import { sorts } from 'shared/misc/sorting';
 import { WIN_POINTS } from 'src/utils/constants';
 import MatchSimulator from './simulator.match';
 
 export default class CupSimulator {
   private static seedTeams(cup: Cup) {
     // sort teams by strength and put them into pots
-    const sortedTeams = [...cup.teams].sort(teamSorts.strength).reverse();
+    const sortedTeams = [...cup.teams].sort(sorts.team.strength).reverse();
     let pots = chunk(
       [...sortedTeams],
       Math.max(sortedTeams.length / cup.seeds, 1),
@@ -83,9 +82,21 @@ export default class CupSimulator {
     round.matches.forEach((match: Required<Match>) =>
       this.updateStatistics(newStandings, match),
     );
+
+    // teams still in the tournament are given same posiiton
+    const advancingTeams = round.matches.map(
+      (match) => getWinner(match as Required<Match>) as Team,
+    );
     newStandings.table
-      .sort(rankingSorts.standard)
-      .forEach((ranking, i) => (ranking.position = i + 1));
+      .sort(sorts.ranking.standard)
+      .forEach(
+        (ranking, i) =>
+          (ranking.position = advancingTeams.some(
+            (t) => t.id === ranking.team.id,
+          )
+            ? advancingTeams.length
+            : i + 1),
+      );
     return newStandings;
   }
 
@@ -94,9 +105,9 @@ export default class CupSimulator {
     let standings: Standings = {
       roundId: rounds[0].id - 1,
       table: cup.teams.map(
-        (team, i) =>
+        (team) =>
           ({
-            position: i + 1,
+            position: cup.teams.length,
             team,
             matchesPlayed: 0,
             wins: 0,
@@ -134,19 +145,15 @@ export default class CupSimulator {
     let roundId = 0;
     while (remainingTeams.length > 1) {
       const matches: Match[] = chunk(remainingTeams, 2).map((pair) => {
-        let match: Match = {
+        const i = random();
+        const match: Match = {
           id: ++matchId,
-          homeTeam: pair[0],
-          awayTeam: pair[1],
+          homeTeam: pair[i],
+          awayTeam: pair[1 - i],
           onNeutralGround: true,
           allowExtraTime: cup.allowExtraTime,
           isKnockout: true,
         };
-
-        // randomly swap opponent teams
-        if (random()) {
-          match = getAwayMatch(match);
-        }
 
         return { ...match, result: MatchSimulator.simulate(match) };
       });
