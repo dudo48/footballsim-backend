@@ -12,6 +12,7 @@ export interface CupResult {
 export default interface Cup {
   id: number;
   teams: Team[];
+  hosts: Team[];
   seeds: number;
   allowExtraTime: boolean;
   result?: CupResult;

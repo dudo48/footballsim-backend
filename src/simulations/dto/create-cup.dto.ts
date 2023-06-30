@@ -5,6 +5,9 @@ export class CreateCupDto {
   @IsArray()
   teams: TeamEntity[];
 
+  @IsArray()
+  hosts: TeamEntity[];
+
   @IsNumber()
   seeds: number;
 

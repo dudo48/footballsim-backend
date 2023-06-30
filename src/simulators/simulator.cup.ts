@@ -1,4 +1,4 @@
-import { chunk, flatten, last, random, shuffle } from 'lodash';
+import { chunk, differenceBy, flatten, last, random, shuffle } from 'lodash';
 import {
   getLoser,
   getTotalGoals,
@@ -17,7 +17,13 @@ import MatchSimulator from './simulator.match';
 export default class CupSimulator {
   private static seedTeams(cup: Cup) {
     // sort teams by strength and put them into pots
-    const sortedTeams = [...cup.teams].sort(sorts.team.strength).reverse();
+    const nonHosts = differenceBy(cup.teams, cup.hosts, (t) => t.id);
+    const sortedNonHosts = nonHosts.sort(sorts.team.strength).reverse();
+    const sortedHosts = [...cup.hosts].sort(sorts.team.strength).reverse();
+
+    // add hosts in the beginning(higher seeding rank)
+    const sortedTeams = [...sortedHosts, ...sortedNonHosts];
+
     let pots = chunk(
       [...sortedTeams],
       Math.max(sortedTeams.length / cup.seeds, 1),
@@ -145,12 +151,17 @@ export default class CupSimulator {
     let roundId = 0;
     while (remainingTeams.length > 1) {
       const matches: Match[] = chunk(remainingTeams, 2).map((pair) => {
-        const i = random();
+        const homeTeamIsHost = cup.hosts.some((t) => t.id === pair[0].id);
+        const awayTeamIsHost = cup.hosts.some((t) => t.id === pair[1].id);
+
+        const i =
+          homeTeamIsHost === awayTeamIsHost ? random() : homeTeamIsHost ? 0 : 1;
+
         const match: Match = {
           id: ++matchId,
           homeTeam: pair[i],
           awayTeam: pair[1 - i],
-          onNeutralGround: true,
+          onNeutralGround: !homeTeamIsHost && !awayTeamIsHost,
           allowExtraTime: cup.allowExtraTime,
           isKnockout: true,
         };

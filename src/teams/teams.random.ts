@@ -12,9 +12,8 @@ export default class RandomTeamsGenerator {
   static generate(data: TeamGenerationParameters) {
     const pareto = random.pareto(data.alpha);
 
-    const n = 16;
     // multiply by two so that the mean is 1 not 0.5
-    const noise = () => random.bates(n)() * 2;
+    const noise = () => random.bates(16)() * 2;
 
     const teams = data.names.map((name) => {
       // attack and defense are related
