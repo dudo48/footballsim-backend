@@ -4,11 +4,10 @@ import {
   getTotalGoals,
   getWinner,
 } from 'shared/functions/match.functions';
-import Cup from 'shared/interfaces/cup.interface';
+import Cup, { CupResult } from 'shared/interfaces/cup.interface';
 import Match from 'shared/interfaces/match.interface';
 import Ranking from 'shared/interfaces/ranking.interface';
 import Round from 'shared/interfaces/round.interface';
-import Standings from 'shared/interfaces/standings.interface';
 import Team from 'shared/interfaces/team.interface';
 import { sorts } from 'shared/misc/sorting';
 import { WIN_POINTS } from 'src/utils/constants';
@@ -48,19 +47,19 @@ export default class CupSimulator {
 
   // update standings table according to one match
   private static updateStatistics(
-    standings: Standings,
+    standings: Ranking[],
     match: Required<Match>,
   ) {
-    const homeTeam = standings.table.find(
+    const homeTeam = standings.find(
       (r) => r.team.id === match.homeTeam.id,
     ) as Ranking;
-    const awayTeam = standings.table.find(
+    const awayTeam = standings.find(
       (r) => r.team.id === match.awayTeam.id,
     ) as Ranking;
-    const winnerTeam = standings.table.find(
+    const winnerTeam = standings.find(
       (r) => r.team.id === (getWinner(match) as Team).id,
     ) as Ranking;
-    const loserTeam = standings.table.find(
+    const loserTeam = standings.find(
       (r) => r.team.id === (getLoser(match) as Team).id,
     ) as Ranking;
     const goals = getTotalGoals(match.result);
@@ -78,68 +77,51 @@ export default class CupSimulator {
     ++loserTeam.losses;
   }
 
-  // add new standings table according to results of a round matches
-  private static computeStandings(standings: Standings, round: Round) {
-    const newStandings = {
-      // perform deep cloning
-      table: standings.table.map((ranking) => ({ ...ranking })),
-      roundId: round.id,
-    };
-    round.matches.forEach((match: Required<Match>) =>
-      this.updateStatistics(newStandings, match),
+  // add new standings table according to results of a round's matches
+  private static computeStandings(matches: Match[], lastRound: Round) {
+    // cloning
+    const newStandings = lastRound.standings.map((ranking) => ({ ...ranking }));
+
+    matches.forEach((match: Required<Match>) =>
+      CupSimulator.updateStatistics(newStandings, match),
     );
 
     // teams still in the tournament are given same posiiton
-    const advancingTeams = round.matches.map(
+    const advancingTeams = matches.map(
       (match) => getWinner(match as Required<Match>) as Team,
     );
-    newStandings.table
+    newStandings
       .sort(sorts.ranking.standard)
       .forEach(
         (ranking, i) =>
           (ranking.position = advancingTeams.some(
             (t) => t.id === ranking.team.id,
           )
-            ? advancingTeams.length
+            ? 1
             : i + 1),
       );
     return newStandings;
   }
 
-  private static createAllStandings(cup: Cup, rounds: Round[]) {
-    // create initial standings
-    let standings: Standings = {
-      roundId: rounds[0].id - 1,
-      table: cup.teams.map(
-        (team) =>
-          ({
-            position: cup.teams.length,
-            team,
-            matchesPlayed: 0,
-            wins: 0,
-            draws: 0,
-            losses: 0,
-            goalsFor: 0,
-            goalsAgainst: 0,
-            points: 0,
-          } as Ranking),
-      ),
-    };
-
-    const allStandings = [standings];
-    rounds.forEach((round) => {
-      standings = CupSimulator.computeStandings(
-        last(allStandings) as Standings,
-        round,
-      );
-      allStandings.push(standings);
-    });
-
-    return allStandings;
-  }
-
   private static simulateRounds(cup: Cup, seededTeams: Team[]) {
-    const rounds: Round[] = [];
+    // initialize first round
+    const rounds: Round[] = [
+      {
+        id: 0,
+        matches: [],
+        standings: cup.teams.map((team) => ({
+          position: cup.teams.length,
+          team,
+          matchesPlayed: 0,
+          wins: 0,
+          draws: 0,
+          losses: 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          points: 0,
+        })),
+      },
+    ];
 
     // create tournament structure from seeds
     const placementIndices = CupSimulator.createPlacementIndices(
@@ -169,7 +151,14 @@ export default class CupSimulator {
         return { ...match, result: MatchSimulator.simulate(match) };
       });
 
-      rounds.push({ id: ++roundId, matches });
+      rounds.push({
+        id: ++roundId,
+        matches,
+        standings: CupSimulator.computeStandings(
+          matches,
+          last(rounds) as Round,
+        ),
+      });
       remainingTeams = matches.map(
         (m: Required<Match>) => getWinner(m) as Team,
       );
@@ -178,13 +167,9 @@ export default class CupSimulator {
     return rounds;
   }
 
-  static simulate(cup: Cup) {
+  static simulate(cup: Cup): CupResult {
     const seededTeams = CupSimulator.seedTeams(cup);
     const rounds: Round[] = CupSimulator.simulateRounds(cup, seededTeams);
-    const allStandings: Standings[] = CupSimulator.createAllStandings(
-      cup,
-      rounds,
-    );
-    return { rounds, allStandings };
+    return { rounds };
   }
 }
