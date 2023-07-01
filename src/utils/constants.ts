@@ -1,4 +1,4 @@
-export const MIN_STRENGTH = 0.1;
+export const MIN_STRENGTH = 1;
 export const MAX_STRENGTH = 100;
 
 export const MIN_MATCH_SIMULATIONS = 1;
